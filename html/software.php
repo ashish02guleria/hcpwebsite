@@ -1,0 +1,131 @@
+<?php include 'includes/header.php'; ?>
+<section class="card">
+  <h2>Software Available</h2>
+  <p>Installed applications, compilers, libraries, and utilities available on the cluster:</p>
+
+  <h3>🧪 Applications</h3>
+  <ul>
+    <li>apps/diamond/2.1.8</li>
+    <li>apps/lammps-stable_2Aug2023</li>
+    <li>apps/masurca-4.0.9</li>
+    <li>apps/metaquad/1.0</li>
+    <li>apps/metawrap</li>
+    <li>apps/netcdf/4.8.1</li>
+    <li>apps/ollama/1.0</li>
+    <li>apps/travis/travis</li>
+  </ul>
+
+  <h3>🧬 Codes</h3>
+  <ul>
+    <li>codes/amber22-cpu_mpi</li>
+    <li>codes/amber22_gpu</li>
+    <li>codes/amber22_parralel_cpu</li>
+    <li>codes/automake-1.14</li>
+    <li>codes/cmake-3.18.6</li>
+    <li>codes/enroot-3.2.0</li>
+    <li>codes/jq-1.6</li>
+    <li>codes/sirah</li>
+  </ul>
+
+  <h3>🧰 Compilers & Tools</h3>
+  <ul>
+    <li>compiler/gcc-6.5.0 to gcc-12.0</li>
+    <li>compiler/cuda-10.2 to cuda-11.7</li>
+    <li>compiler/anaconda3 & anaconda3-23.07.0</li>
+    <li>compiler/nvhpc, nvhpc-nompi, nvhpc-byo-compiler</li>
+    <li>compiler/openmpi (multiple versions)</li>
+    <li>compiler/python2.7, python3.8, python3.11.9</li>
+    <li>compiler/R-3.6.0, scala, stata</li>
+    <li>compiler/alphafold, deeplabcut, emsdk, git-lfs, go, jdk, phame, gromacs</li>
+  </ul>
+
+  <h3>📚 Libraries</h3>
+  <ul>
+    <li>library/HDF5</li>
+    <li>libs/fftw-3.3.8</li>
+    <li>libs/libblas-3.10.0</li>
+    <li>libs/liblapack-3.10.1</li>
+    <li>libs/libseccomp-2.5.1 & 2.5.4</li>
+    <li>libs/libtool-2.4.6</li>
+    <li>libs/libzstd-1.5.2</li>
+    <li>libs/OpenBlas-0.3.20</li>
+  </ul>
+
+  <h3>🔧 Utilities</h3>
+  <ul>
+    <li>utils/gperf-3.1</li>
+    <li>utils/smartmontools-7.3</li>
+  </ul>
+
+  <h3>🐍 Python Virtual Environments</h3>
+  <p>
+    Using Python virtual environments allows you to manage dependencies efficiently, isolate project requirements, and ensure reproducibility. 
+    We recommend using the <code>venv</code> module from the Python standard library.
+  </p>
+
+  <h4>Creating and Using a Virtual Environment</h4>
+  <ol>
+    <li><code>module load compiler/anaconda3</code></li>
+    <li><code>python -m venv &lt;ENV_NAME&gt;</code></li>
+    <li><code>source &lt;ENV_NAME&gt;/bin/activate</code></li>
+    <li><code>pip install &lt;PACKAGENAME&gt;</code></li>
+  </ol>
+
+  <p>
+    This approach keeps dependencies isolated, enables version control of Python packages, and ensures reproducibility in your user space.
+  </p>
+
+  <div class="note">
+    <strong>Note:</strong> When submitting jobs via <code>qsub</code>, remember to activate your virtual environment inside your <code>job.sh</code> file:
+  </div>
+
+<pre><code>#!/bin/bash
+#PBS -N my_job
+#PBS -l walltime=01:00:00
+#PBS -l select=1:ncpus=4:mem=8gb
+
+module load compiler/anaconda3
+source &lt;ENV_NAME&gt;/bin/activate
+python my_script.py
+</code></pre>
+
+  <h3>📥 Requesting New Software</h3>
+  <p>
+    To request installation of new software on the HPC cluster, please follow these steps:
+  </p>
+  <ol>
+    <li>
+      Include the following details:
+      <ul>
+        <li>Software name and version</li>
+        <li>Licensing information (open-source or commercial)</li>
+        <li>Brief use-case or justification</li>
+        <li>Dependencies or module requirements</li>
+        <li>Preferred installation location (if applicable)</li>
+        <li>Please provide us with a reference link or any relevant documentation related to the software. This will assist our system administrators in setting up the software correctly on the HPC cluster.</li>
+      </ul>
+    </li>
+    <li>
+      Obtain written approval from your <strong>PI or HOD</strong> and attach it with the completed form.
+    </li>
+    <li>
+      Submit the request via email to <code>hpc.helpdesk@ashoka.edu.in</code> or through the internal ticketing portal.
+    </li>
+  </ol>
+
+  <h4>⏳ Review & Installation Timeline</h4>
+  <p>
+    The HPC team will evaluate compatibility, resource impact, and licensing constraints. Installation may take up to <strong>5–10 business days</strong> depending on complexity and queue.
+  </p>
+
+  <h4>🛠️ Support Scope</h4>
+  <p>
+    The HPC team will assist with installation and basic configuration. Advanced usage, optimization, or debugging support may require collaboration with the requesting user or external experts.
+  </p>
+
+  <h4>✅ Post-Installation Testing</h4>
+  <p>
+    Once installed, users are expected to verify functionality and report any issues. Sample input/output or test scripts may be requested to validate the setup.
+  </p>
+</section>
+<?php include 'includes/footer.php'; ?>

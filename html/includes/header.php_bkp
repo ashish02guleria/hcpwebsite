@@ -1,0 +1,28 @@
+<?php
+$active = basename($_SERVER['PHP_SELF']);
+?>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>HPC Cluster Documentation</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1 class="brand"><a href="/index.php">HPC Cluster</a></h1>
+    <nav class="main-nav">
+      <a href="/index.php" class="<?= $active=='index.php' ? 'active' : '' ?>">Home</a>
+      <a href="/about.php" class="<?= $active=='about.php' ? 'active' : '' ?>">About HPC</a>
+      <a href="/cluster.php" class="<?= $active=='cluster.php' ? 'active' : '' ?>">Cluster Info</a>
+      <a href="/getting_started.php" class="<?= $active=='getting_started.php' ? 'active' : '' ?>">Getting Started</a>
+      <a href="/jobs.php" class="<?= $active=='jobs.php' ? 'active' : '' ?>">Job Scheduling</a>
+      <a href="/software.php" class="<?= $active=='software.php' ? 'active' : '' ?>">Software</a>
+      <a href="/linux_basics.php" class="<?= $active=='linux_basics.php' ? 'active' : '' ?>">Linux Basics</a>
+      <a href="/vpn.php" class="<?= $active=='VPN Access' ? 'active' : '' ?>">VPN</a>
+    </nav>
+  </div>
+</header>
+<main class="container">

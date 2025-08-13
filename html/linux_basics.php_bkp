@@ -1,0 +1,25 @@
+<?php include 'includes/header.php'; ?>
+<section class="card">
+  <h2>Basic Linux for HPC Users</h2>
+  <h3>Filesystem navigation</h3>
+  <ul>
+    <li><code>ls -la</code> - list files</li>
+    <li><code>cd /path/to/dir</code> - change directory</li>
+    <li><code>pwd</code> - current directory</li>
+  </ul>
+  <h3>File manipulation</h3>
+  <ul>
+    <li><code>cp file dest</code> - copy</li>
+    <li><code>mv file dest</code> - move/rename</li>
+    <li><code>rm file</code> - remove</li>
+  </ul>
+  <h3>Editors</h3>
+  <p>Use <code>nano</code> or <code>vi</code>. Example to edit:</p>
+  <pre>nano myscript.sh</pre>
+  <h3>Permissions</h3>
+  <p>View with <code>ls -l</code> and change with <code>chmod</code> / <code>chown</code>.</p>
+  <h3>Checking disk usage</h3>
+  <pre>df -h
+du -sh myfolder</pre>
+</section>
+<?php include 'includes/footer.php'; ?>

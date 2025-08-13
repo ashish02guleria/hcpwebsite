@@ -1,0 +1,15 @@
+<?php include 'includes/header.php'; ?>
+<section class="card">
+  <h2>Welcome to the HPC Cluster Documentation</h2>
+  <p>This site documents cluster usage, policies, software, and basic Linux topics for new users.</p>
+  <ul>
+    <li><strong>Contact:</strong> hpc.helpdesk@ashoka.edu.in</li>
+    <li><strong>Quick links:</strong> <a href="/getting_started.php">Getting Started</a>, <a href="/jobs.php">Job Scheduling</a></li>
+  </ul>
+</section>
+
+<section class="card">
+  <h3>Recent notes</h3>
+  <p>If you uploaded an older site, it has been imported where possible. Use the <code>/old_content/</code> folder to review original files.</p>
+</section>
+<?php include 'includes/footer.php'; ?>

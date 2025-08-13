@@ -1,0 +1,18 @@
+
+/* Simple modern styles */
+:root{--accent:#1f6feb;--muted:#6b7280;--bg:#f6f8fa}
+*{box-sizing:border-box}
+body{font-family:Inter, Arial, sans-serif;background:var(--bg);color:#111;margin:0;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.site-header{background:white;border-bottom:1px solid #e6e9ef}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.brand a{color:var(--accent);text-decoration:none;font-weight:700;font-size:1.2rem}
+.main-nav a{margin-left:12px;text-decoration:none;color:var(--muted);padding:10px;border-radius:6px}
+.main-nav a.active, .main-nav a:hover{background:#eef4ff;color:var(--accent);font-weight:600}
+.card{background:white;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(20,20,50,0.04);margin-bottom:16px}
+h2{color:#0f1724}
+code{background:#0f17241a;padding:2px 6px;border-radius:6px;font-family:monospace}
+pre{background:#0f17241a;padding:12px;border-radius:6px;overflow:auto}
+footer.site-footer{padding:18px 0;text-align:center;color:var(--muted)}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:8px;border-bottom:1px solid #eef2f7;text-align:left}

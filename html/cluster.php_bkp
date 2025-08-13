@@ -1,0 +1,18 @@
+<?php include 'includes/header.php'; ?>
+<section class="card">
+  <h2>Cluster Information</h2>
+  <h3>Node Types</h3>
+  <ul>
+    <li><strong>Login/Master Nodes:</strong> Gateway to the cluster; do not run intensive jobs here.</li>
+    <li><strong>Compute Nodes:</strong> Where scheduled jobs run. No direct SSH access to compute nodes.</li>
+    <li><strong>GPU Nodes:</strong> Compute nodes equipped with GPUs. Require explicit resource requests.</li>
+  </ul>
+  <h3>Technical Configuration</h3>
+  <p>Include details about CPU types, RAM, interconnects (InfiniBand/Ethernet), and storage. Example:</p>
+  <pre>Compute nodes: 2 x AMD EPYC 32-core, 256GB RAM
+GPU nodes: 4 x NVIDIA A100, 512GB RAM
+Storage: Lustre / NFS with X TB usable</pre>
+  <h3>Policies</h3>
+  <p>Account usage, job priorities, data retention, and unacceptable use (no cryptocurrency, no account sharing).</p>
+</section>
+<?php include 'includes/footer.php'; ?>

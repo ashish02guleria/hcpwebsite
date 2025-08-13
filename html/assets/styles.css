@@ -1,0 +1,160 @@
+:root {
+  --accent: #1f6feb;
+  --accent-dark: #174ea6;
+  --muted: #6b7280;
+  --bg: #f6f8fa;
+  --text: #111;
+  --card-bg: #ffffff;
+  --hover-bg: #eef4ff;
+  --shadow: 0 6px 18px rgba(20, 20, 50, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e6e9ef;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  background: var(--hover-bg);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Typography */
+h2 {
+  color: #0f1724;
+  margin-top: 0;
+}
+
+code {
+  background: #0f17241a;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: monospace;
+}
+
+pre {
+  background: #0f17241a;
+  padding: 12px;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+/* Tables */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border-bottom: 1px solid #eef2f7;
+  text-align: left;
+}
+
+/* Footer */
+footer.site-footer {
+  padding: 18px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+  }
+
+  .main-nav.open ul {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
